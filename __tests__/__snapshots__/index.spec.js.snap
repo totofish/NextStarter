@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Index Snapshot Testing Index Dom 1`] = `
+<div>
+  <header>
+    <nav>
+      <a
+        href="/"
+        onClick={[Function]}
+      >
+        Index
+      </a>
+      <br />
+      <a
+        href="/page/a"
+        onClick={[Function]}
+      >
+        Page/a
+      </a>
+      <br />
+      <a
+        href="/page/b"
+        onClick={[Function]}
+      >
+        Page/b
+      </a>
+      <br />
+    </nav>
+  </header>
+  == Index ==
+  <br />
+  <br />
+  <footer>
+    Footer
+  </footer>
+</div>
+`;

@@ -37,14 +37,14 @@ yarn run coverage
 
 ```javascript
 static async getInitialProps({ store }) {
-	let action = getIP();
-	store.dispatch(action);
-	
-	return Promise.all([action]).then((value) => {
-		return { ip: value[0].ip };
-	}).catch(function(error){
-		return {};
-	});
+  let action = getIP();
+  store.dispatch(action);
+  
+  return Promise.all([action]).then((value) => {
+    return { ip: value[0].ip };
+  }).catch(function(error){
+    return {};
+  });
 }
 ```
 
@@ -52,14 +52,14 @@ static async getInitialProps({ store }) {
 
 ```javascript
 static async getInitialProps({ store }) {
-	let action = getIP();
-	store.dispatch(action);
-	
-	return action.Promise.then((value) => {
-		return { ip: value.ip }; 
-	}, (error) => {
-		return  }; 
-	});
+  let action = getIP();
+  store.dispatch(action);
+  
+  return action.Promise.then((value) => {
+    return { ip: value.ip }; 
+  }, (error) => {
+    return  {}; 
+  });
 }
 ```
 
@@ -67,14 +67,14 @@ static async getInitialProps({ store }) {
 
 ```javascript
 static async getInitialProps({ store }) {
-	return new Promise((resolve, reject) => {
-		store.dispatch(getIP({
-			callback: (res) => {
-				resolve(res);
-			}
-		}));
-	}).then((res) => {
-	  return { stars: json.stargazers_count }; 
-	});
+  return new Promise((resolve, reject) => {
+    store.dispatch(getIP({
+      callback: (res) => {
+        resolve(res);
+      }
+    }));
+  }).then((res) => {
+    return {}; 
+  });
 }
 ```

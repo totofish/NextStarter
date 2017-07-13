@@ -1,7 +1,7 @@
 const path = require('path');
-const Koa = require('koa');
 const next = require('next');
-const Router = require('koa-router');
+const express = require('express')
+const compression = require('compression');
 const routes = require('./routes');
 
 const dev = process.env.NODE_ENV !== 'production';
@@ -11,26 +11,20 @@ const PORT = process.env.PORT || 3000;
 
 app.prepare()
 .then(() => {
-  const server = new Koa()
-  const router = new Router()
+  const server = express();
+  server.use(compression({threshold: 0}));
 
-  router.get('*', async ctx => {
-    if (ctx.req.url === '/sw.js') {
-			await app.serveStatic(ctx.req, ctx.res, path.resolve('./.next/sw.js'));
-		} else {
-			await handler(ctx.req, ctx.res)
-      ctx.respond = false
-		}
+  server.get('/sw.js', (req, res) => {
+    // req.url === '/sw.js'
+    app.serveStatic(req, res, path.resolve('./.next/sw.js'));
   })
 
-  server.use(async (ctx, next) => {
-    ctx.res.statusCode = 200
-    await next()
+  server.get('*', (req, res) => {
+    handler(req, res);
   })
 
-  server.use(router.routes())
   server.listen(PORT, (err) => {
-    if (err) throw err
-    console.log(`> Ready on http://localhost:${PORT}`);
+    if (err) throw err;
+    console.log(`> Ready on http://localhost:${PORT}`);    
   })
 })

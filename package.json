@@ -7,8 +7,8 @@
     "dev": "node server",
     "build": "next build",
     "start": "NODE_ENV=production node server",
-    "test": "jest",
-    "coverage": "jest --coverage"
+    "test": "jest --no-cache",
+    "coverage": "jest --coverage --no-cache"
   },
   "keywords": [],
   "author": "totofish",
@@ -40,10 +40,37 @@
     "sass-loader": "^6.0.6"
   },
   "devDependencies": {
+    "babel-jest": "^20.0.3",
     "enzyme": "^2.9.1",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "^20.0.4",
+    "jest-junit": "^2.1.0",
     "react-addons-test-utils": "^15.6.0",
     "react-test-renderer": "^15.6.1",
     "sw-precache-webpack-plugin": "^0.11.3"
+  },
+  "jest": {
+    "moduleDirectories": ["node_modules"],
+    "moduleFileExtensions": ["js", "jsx"],
+    "testPathIgnorePatterns": [
+      "<rootDir>/styles/",
+      "<rootDir>/.next/",
+      "<rootDir>/node_modules/"
+    ],
+    "testMatch": [
+      "**/__tests__/**/?(*.)(spec|test).js?(x)"
+    ],
+    "moduleNameMapper": {
+      "\\.(css|scss|less)$": "identity-obj-proxy"
+    },
+    "testResultsProcessor": "./node_modules/jest-junit"
+  },
+  "jest-junit": {
+    "suiteName": "Jest JUnit Unit Tests",
+    "output": "./junit.xml",
+    "classNameTemplate": "{classname}",
+    "titleTemplate": "{title}",
+    "ancestorSeparator": " › ",
+    "usePathForSuiteName": "true"
   }
 }

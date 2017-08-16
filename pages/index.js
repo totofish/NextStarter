@@ -25,16 +25,16 @@ class Index extends React.Component {
 		store.dispatch(action_IP);
 
 		return Promise.all([action_IP]).then((value) => {
-			return { stars: json.stargazers_count, ip:value[0].ip };
+			return { stars: json.stargazers_count, ip: value[0].ip };
 		}).catch(function(error){
 			return { stars: json.stargazers_count };
 		});
 
 		/*
 		return action_IP.Promise.then((value) => {
-			return { stars: json.stargazers_count }; 
+			return { stars: json.stargazers_count };
 		}, (error) => {
-			return { stars: json.stargazers_count }; 
+			return { stars: json.stargazers_count };
 		});
 		*/
 
@@ -46,7 +46,7 @@ class Index extends React.Component {
 				}
 			}));
 		}).then((res) => {
-      return { stars: json.stargazers_count }; 
+      return { stars: json.stargazers_count };
     });
 		*/
 	}

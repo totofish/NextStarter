@@ -1,0 +1,114 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Index Snapshot Testing Index Dom 1`] = `
+<div
+  className="layout"
+  data-jsx={1100216044}
+>
+  <header
+    data-jsx={1100216044}
+  >
+    <nav
+      data-jsx={1100216044}
+    >
+      <ul
+        data-jsx={1100216044}
+      >
+        <li
+          className="active"
+          data-jsx={1100216044}
+          onClick={[Function]}
+        >
+          <a
+            data-jsx={1100216044}
+          >
+            Index
+          </a>
+        </li>
+        <li
+          className=""
+          data-jsx={1100216044}
+          onClick={[Function]}
+        >
+          <a
+            data-jsx={1100216044}
+          >
+            page / a
+          </a>
+        </li>
+        <li
+          className=""
+          data-jsx={1100216044}
+          onClick={[Function]}
+        >
+          <a
+            data-jsx={1100216044}
+          >
+            page / b
+          </a>
+        </li>
+        <li
+          className=""
+          data-jsx={1100216044}
+          onClick={[Function]}
+        >
+          <a
+            data-jsx={1100216044}
+          >
+            page / c
+          </a>
+        </li>
+        <li
+          className=""
+          data-jsx={1100216044}
+          onClick={[Function]}
+        >
+          <a
+            data-jsx={1100216044}
+          >
+            page / d
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <i
+    className="material-icons"
+    data-jsx={1100216044}
+  >
+    
+  </i>
+  <h1
+    className="title"
+    data-jsx={1100216044}
+  >
+    Index
+  </h1>
+  <i
+    className="material-icons"
+    data-jsx={1100216044}
+  >
+    
+  </i>
+  <h4
+    style={
+      Object {
+        "marginBottom": 10,
+      }
+    }
+  >
+    NEXT.JS STARS :
+  </h4>
+  1999
+  <h4
+    style={
+      Object {
+        "marginBottom": 10,
+      }
+    }
+  >
+    IP :
+  </h4>
+  127.0.0.1
+</div>
+`;

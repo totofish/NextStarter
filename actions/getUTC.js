@@ -3,7 +3,7 @@ import * as sysAction from '../actions/sys'
 import { multiAction } from '../actions/multiAction'
 import * as types from '../constants/actionTypes'
 import config, { PROCESS_GLOBAL, PROCESS_ALL } from '../constants/config'
-import appendPromise from '../utils/appendPromise'
+import appendPromise from '../utility/appendPromise'
 
 /**
  * 取得Server時間

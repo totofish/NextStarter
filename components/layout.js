@@ -8,7 +8,7 @@ import { Link, Router } from '../routes'
 import stylesheet from 'styles/index.scss';
 
 Router.onRouteChangeStart = (url) => {
-  console.log(`Loading: ${url}`);
+  // console.log(`Loading: ${url}`);
   NProgress.start();
 }
 Router.onRouteChangeComplete = () => NProgress.done();

@@ -1,6 +1,6 @@
 import * as types from '../constants/actionTypes'
 import { PROCESS_GLOBAL, PROCESS_ALL } from '../constants/config'
-import { s4 } from '../utils/guid'
+import { s4 } from '../utility/guid'
 
 export function randomRocessId() {
   return `${ Date.now() }-${ s4() }${ s4() }`

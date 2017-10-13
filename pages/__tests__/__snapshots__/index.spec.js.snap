@@ -2,69 +2,63 @@
 
 exports[`Index Snapshot Testing Index Dom 1`] = `
 <div
-  className="layout"
-  data-jsx={1100216044}
+  className="jsx-3955691776 layout"
 >
   <header
-    data-jsx={1100216044}
+    className="jsx-3955691776"
   >
     <nav
-      data-jsx={1100216044}
+      className="jsx-3955691776"
     >
       <ul
-        data-jsx={1100216044}
+        className="jsx-3955691776"
       >
         <li
-          className="active"
-          data-jsx={1100216044}
+          className="jsx-3955691776 active"
           onClick={[Function]}
         >
           <a
-            data-jsx={1100216044}
+            className="jsx-3955691776"
           >
             Index
           </a>
         </li>
         <li
-          className=""
-          data-jsx={1100216044}
+          className="jsx-3955691776 "
           onClick={[Function]}
         >
           <a
-            data-jsx={1100216044}
+            className="jsx-3955691776"
           >
             page / a
           </a>
         </li>
         <li
-          className=""
-          data-jsx={1100216044}
+          className="jsx-3955691776 "
           onClick={[Function]}
         >
           <a
-            data-jsx={1100216044}
+            className="jsx-3955691776"
           >
             page / b
           </a>
         </li>
         <li
-          className=""
-          data-jsx={1100216044}
+          className="jsx-3955691776 "
           onClick={[Function]}
         >
           <a
-            data-jsx={1100216044}
+            className="jsx-3955691776"
           >
             page / c
           </a>
         </li>
         <li
-          className=""
-          data-jsx={1100216044}
+          className="jsx-3955691776 "
           onClick={[Function]}
         >
           <a
-            data-jsx={1100216044}
+            className="jsx-3955691776"
           >
             page / d
           </a>
@@ -73,20 +67,17 @@ exports[`Index Snapshot Testing Index Dom 1`] = `
     </nav>
   </header>
   <i
-    className="material-icons"
-    data-jsx={1100216044}
+    className="jsx-3955691776 material-icons"
   >
     
   </i>
   <h1
-    className="title"
-    data-jsx={1100216044}
+    className="jsx-3955691776 title"
   >
     Index
   </h1>
   <i
-    className="material-icons"
-    data-jsx={1100216044}
+    className="jsx-3955691776 material-icons"
   >
     
   </i>

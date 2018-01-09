@@ -4,8 +4,7 @@ import NProgress from 'nprogress';
 import cn from 'classnames';
 // import Router from 'next/router';
 import { Link, Router } from '../routes'
-// styles
-import stylesheet from 'styles/index.scss';
+
 
 Router.onRouteChangeStart = (url) => {
   // console.log(`Loading: ${url}`);
@@ -19,7 +18,6 @@ export default ({ children, title = 'NEXT.JS PWA', url }) => (
   <div className="layout">
     <Head>
       <title>{ title }</title>
-      <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
     </Head>
 
     <style jsx>{`

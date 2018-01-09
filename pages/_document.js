@@ -1,5 +1,7 @@
 import React from 'react';
 import Document, { Head, Main, NextScript } from 'next/document';
+// styles
+import stylesheet from '../styles/index.scss';
 
 export default class MyDocument extends Document {
 	render() {
@@ -28,9 +30,21 @@ export default class MyDocument extends Document {
 					<meta name="apple-mobile-web-app-status-bar-style" content="black" />
 
 					<meta name="theme-color" content="#673ab7" />
-					<link rel="manifest" href="static/manifest.json" />
+					<link rel="manifest" href="/static/manifest.json" />
 					<link rel='stylesheet' type='text/css' href='/static/nprogress.css' />
-
+					{
+						process.env.NODE_ENV == 'production'
+							? <link
+									rel="stylesheet"
+									type="text/css" 
+									href={`/static/styles/app.css?${this.props.__NEXT_DATA__
+										.buildStats['app.js'].hash}`}
+								/>
+							: <style
+									global="true"
+									dangerouslySetInnerHTML={{ __html: stylesheet }}
+								/>
+					}
 					<script type="text/javascript" dangerouslySetInnerHTML={{__html: ieScript}}></script>
 				</Head>
 				<body>

@@ -14,10 +14,11 @@ app.prepare()
   const server = express();
   server.use(compression({threshold: 0}));
 
-  server.get('/sw.js', (req, res) => {
-    // req.url === '/sw.js'
-    app.serveStatic(req, res, path.resolve('./.next/sw.js'));
-  })
+  server.use(express.static(path.join(__dirname, '.next/public')));
+
+  // server.get('/sw.js', (req, res) => {
+  //   app.serveStatic(req, res, path.resolve('./.next/sw.js'));
+  // })
 
   server.get('*', (req, res) => {
     handler(req, res);

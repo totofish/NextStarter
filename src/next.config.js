@@ -5,7 +5,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 
 module.exports = {
-	// distDir: '../.next',
+	distDir: '../.next',
 
 	webpack: (config, { dev }) => {
 
@@ -109,7 +109,7 @@ module.exports = {
 
 		config.entry = () =>
 		oldEntry().then(entry => {
-			entry['main.js'].push(path.resolve('./utility/offline'));
+			entry['main.js'].push(path.resolve(__dirname, 'utility/offline'));
 			return entry;
 		});
 

@@ -2,7 +2,7 @@ import { shallow, mount, render } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import App from 'pages/index';
+import App from 'src/pages/index';
 
 const url = {
   pathname: "/",

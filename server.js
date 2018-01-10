@@ -2,10 +2,10 @@ const path = require('path');
 const next = require('next');
 const express = require('express')
 const compression = require('compression');
-const routes = require('./routes');
+const routes = require('./src/routes');
 
 const dev = process.env.NODE_ENV !== 'production';
-const app = next({ dir: '.', dev });
+const app = next({ dir: './src', dev });
 const handler = routes.getRequestHandler(app);
 const PORT = process.env.PORT || 3000;
 

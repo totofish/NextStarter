@@ -1,9 +1,9 @@
-import * as types from '../constants/actionTypes'
-import { PROCESS_GLOBAL, PROCESS_ALL } from '../constants/config'
-import { s4 } from '../utility/guid'
+import * as types from '../constants/actionTypes';
+import { PROCESS_GLOBAL } from '../constants/config';
+import { s4 } from '../utility/guid';
 
 export function randomRocessId() {
-  return `${ Date.now() }-${ s4() }${ s4() }`
+  return `${Date.now()}-${s4()}${s4()}`;
 }
 
 /**
@@ -13,13 +13,13 @@ export function randomRocessId() {
  * @return Processing Start Action
  */
 export const processingStart = (level = PROCESS_GLOBAL, id = '#') => {
-  if(!level) return
+  if (!level) return false;
   return {
-    type : types.PROCESSING_START,
+    type: types.PROCESSING_START,
     level,
     id
-  }
-}
+  };
+};
 
 /**
  * 停止Processing狀態
@@ -28,10 +28,10 @@ export const processingStart = (level = PROCESS_GLOBAL, id = '#') => {
  * @return Processing End Action
  */
 export const processingEnd = (level = PROCESS_GLOBAL, id = '#') => {
-  if(!level) return
+  if (!level) return false;
   return {
     type: types.PROCESSING_END,
     level,
     id
-  }
-}
+  };
+};

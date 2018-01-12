@@ -1,4 +1,6 @@
 const nextRoutes = require('next-routes');
-const routes = module.exports = nextRoutes();
 
-routes.add('page', '/page/:type(a|b|c|d)')
+const routes = nextRoutes();
+module.exports = routes;
+
+routes.add('page', '/page/:type(a|b|c|d)');

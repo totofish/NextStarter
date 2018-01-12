@@ -1,16 +1,25 @@
 import React from 'react';
 import Head from 'next/head';
+import PropTypes from 'prop-types';
 // styles
 import stylesheet from '../styles/index.scss';
 
 export default class Error extends React.Component {
-  static getInitialProps ({ res, jsonPageRes }) {
-    const statusCode = res ? res.statusCode : (jsonPageRes ? jsonPageRes.status : null)
-    return { statusCode }
+  static getInitialProps({ res, jsonPageRes }) {
+    let statusCode = jsonPageRes ? jsonPageRes.status : null;
+    statusCode = res ? res.statusCode : statusCode;
+    return { statusCode };
   }
 
-  render () {
+  static propTypes = {
+    statusCode: PropTypes.string.isRequired
+  }
+
+  static defaultProps = {}
+
+  render() {
     console.log(this.props.statusCode);
+
     return (
       <div className="page-not-found">
         <Head>
@@ -47,12 +56,13 @@ export default class Error extends React.Component {
             vertical-align: middle;
             display: inline-block;
           }
-        `}</style>
-        
+        `}
+        </style>
+
         <div className="center-box">
           <div className="area">
             <i className="material-icons icon">&#xE87B;</i>
-            <br/>
+            <br />
             {
               this.props.statusCode === 404 ?
                 'The requested URL was not found'
@@ -61,6 +71,6 @@ export default class Error extends React.Component {
           </div>
         </div>
       </div>
-    )
+    );
   }
 }

@@ -1,4 +1,4 @@
-import * as types from '../constants/actionTypes'
+import * as types from '../constants/actionTypes';
 
 /**
  * 依序批次Actions
@@ -6,32 +6,26 @@ import * as types from '../constants/actionTypes'
  * @param  actions 一個array,內容可以接受function || action
  * @return         Multi Action
  */
-export const multiAction = ({ id, actions }) => {
-  return {
-    type: types.ACTION_STEP_ASYNC,
-    id,
-    actions
-  }
-}
+export const multiAction = ({ id, actions }) => ({
+  type: types.ACTION_STEP_ASYNC,
+  id,
+  actions
+});
 
 
 /**
  * API Action Cancel
  * @return Object 中斷等待中的API Action
  */
-export const multiActionCancel = () => {
-  return {
-    type: types.ACTION_STEP_CANCEL
-  }
-}
+export const multiActionCancel = () => ({
+  type: types.ACTION_STEP_CANCEL
+});
 
 
 /**
  * API Action Cancel
  * @return Object 中斷等待中的API Action
  */
-export const apiActionCancel = () => {
-  return {
-    type: types.API_CANCEL
-  }
-}
+export const apiActionCancel = () => ({
+  type: types.API_CANCEL
+});

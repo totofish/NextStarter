@@ -2,63 +2,63 @@
 
 exports[`Index Snapshot Testing Index Dom 1`] = `
 <div
-  className="jsx-3955691776 layout"
+  className="jsx-897134869 layout"
 >
   <header
-    className="jsx-3955691776"
+    className="jsx-897134869"
   >
     <nav
-      className="jsx-3955691776"
+      className="jsx-897134869"
     >
       <ul
-        className="jsx-3955691776"
+        className="jsx-897134869"
       >
         <li
-          className="jsx-3955691776 active"
+          className="jsx-897134869 active"
           onClick={[Function]}
         >
           <a
-            className="jsx-3955691776"
+            className="jsx-897134869"
           >
             Index
           </a>
         </li>
         <li
-          className="jsx-3955691776 "
+          className="jsx-897134869 "
           onClick={[Function]}
         >
           <a
-            className="jsx-3955691776"
+            className="jsx-897134869"
           >
             page / a
           </a>
         </li>
         <li
-          className="jsx-3955691776 "
+          className="jsx-897134869 "
           onClick={[Function]}
         >
           <a
-            className="jsx-3955691776"
+            className="jsx-897134869"
           >
             page / b
           </a>
         </li>
         <li
-          className="jsx-3955691776 "
+          className="jsx-897134869 "
           onClick={[Function]}
         >
           <a
-            className="jsx-3955691776"
+            className="jsx-897134869"
           >
             page / c
           </a>
         </li>
         <li
-          className="jsx-3955691776 "
+          className="jsx-897134869 "
           onClick={[Function]}
         >
           <a
-            className="jsx-3955691776"
+            className="jsx-897134869"
           >
             page / d
           </a>
@@ -67,17 +67,17 @@ exports[`Index Snapshot Testing Index Dom 1`] = `
     </nav>
   </header>
   <i
-    className="jsx-3955691776 material-icons"
+    className="jsx-897134869 material-icons"
   >
     
   </i>
   <h1
-    className="jsx-3955691776 title"
+    className="jsx-897134869 title"
   >
     Index
   </h1>
   <i
-    className="jsx-3955691776 material-icons"
+    className="jsx-897134869 material-icons"
   >
     
   </i>

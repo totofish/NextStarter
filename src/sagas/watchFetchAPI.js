@@ -44,7 +44,7 @@ function* sendAPI(action) {
 }
 
 
-/// Single API
+// Single API
 function* fetchFlow(action) {
   const task = yield fork(sendAPI, action);
   yield take(types.API_CANCEL);

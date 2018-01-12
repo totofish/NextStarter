@@ -16,7 +16,9 @@ async function fetchAPI(url, options) {
   return json;
 }
 
-function api({ fullUrl, contentType, Authorization, method = 'GET', body = {} }) {
+function api({
+  fullUrl, contentType, Authorization, method = 'GET', body = {}
+}) {
   let $fullUrl;
   let $method = method.toLocaleUpperCase();
   const $contentType = contentType.toLocaleUpperCase();
@@ -95,7 +97,7 @@ function* sendAPI(action) {
   }
 }
 
-/// Single API
+// Single API
 export function* apiFlow(action) {
   const task = yield fork(sendAPI, action);
   yield take(types.API_CANCEL);
@@ -104,18 +106,18 @@ export function* apiFlow(action) {
   if (typeof action.processingEnd === 'object') yield put(action.processingEnd);
 }
 
-/// Multi Step
+// Multi Step
 function* multiFlow(action) {
   for (let i = 0, j = action.actions.length; i < j; i += 1) {
     try {
       const actionStep = action.actions[i];
       if (typeof actionStep === 'object') {
         if (actionStep.type === types.API_ASYNC) {
-          yield call(sendAPI, actionStep);                   // api 異步處理
-        } else if (actionStep.type === types.DELAY) {        // 暫停
+          yield call(sendAPI, actionStep); // api 異步處理
+        } else if (actionStep.type === types.DELAY) { // 暫停
           yield call(delay, actionStep.millisecond);
         } else {
-          yield put(actionStep);                             // 一般 action 呼叫
+          yield put(actionStep); // 一般 action 呼叫
         }
       } else if (typeof actionStep === 'function') {
         actionStep.call();

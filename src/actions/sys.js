@@ -1,4 +1,4 @@
-import * as types from '../constants/actionTypes'
+import * as types from '../constants/actionTypes';
 
 /*
 // 用法規則
@@ -8,30 +8,22 @@ sysMessage({
 })
 */
 
-export const sysMessage = ({ type, ...message }) => {
-  return {
-    type: types.SYS_MESSAGE,
-    info: type ? { type, ...message } : null
-  }
-}
+export const sysMessage = ({ type, ...message }) => ({
+  type: types.SYS_MESSAGE,
+  info: type ? { type, ...message } : null
+});
 
-export const clearSysMessage = () => {
-  return {
-    type: types.SYS_MESSAGE_CLEAR
-  }
-}
+export const clearSysMessage = () => ({
+  type: types.SYS_MESSAGE_CLEAR
+});
 
-export const trace = (log) => {
-  return {
-    type: types.TRACE,
-    log
-  }
-}
+export const trace = log => ({
+  type: types.TRACE,
+  log
+});
 
 
-export const delay = (millisecond) => {
-  return {
-    type: types.DELAY,
-    millisecond
-  }
-}
+export const delay = millisecond => ({
+  type: types.DELAY,
+  millisecond
+});

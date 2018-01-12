@@ -1,11 +1,11 @@
-import { shallow, mount, render } from 'enzyme';
+import { mount } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import App from 'src/pages/index';
+import App from '../index';
 
 const url = {
-  pathname: "/",
+  pathname: '/',
   query: {},
   back: jest.fn(),
   push: jest.fn(),
@@ -13,17 +13,17 @@ const url = {
   replace: jest.fn(),
   replaceTo: jest.fn(),
 };
-const app = mount(
+const app = mount((
   <App
     stars={1999}
     url={url}
     info={{
-      message: "127.0.0.1",
-      type: "IP"
+      message: '127.0.0.1',
+      type: 'IP'
     }}
     ip="127.0.0.1"
   />
-);
+));
 
 describe('Index With Enzyme', () => {
   it('Have text "127.0.0.1"', () => {
@@ -37,17 +37,17 @@ describe('Index With Enzyme', () => {
 
 describe('Index Snapshot Testing', () => {
   it('Index Dom', () => {
-    const component = renderer.create(
+    const component = renderer.create((
       <App
         stars={1999}
         url={url}
         info={{
-          message: "127.0.0.1",
-          type: "IP"
+          message: '127.0.0.1',
+          type: 'IP'
         }}
         ip="127.0.0.1"
       />
-    );
+    ));
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });

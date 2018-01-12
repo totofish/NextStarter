@@ -1,0 +1,8 @@
+/node_modules/**
+/bower_components/**
+/coverage/**
+/bin/**
+/build/**
+/.next/**
+/__mocks__/**
+/src/static/**

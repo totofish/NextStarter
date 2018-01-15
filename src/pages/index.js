@@ -18,8 +18,8 @@ class Index extends React.Component {
   }) {
     const stargazers = fetch('https://api.github.com/repos/zeit/next.js')
       .then(r => r.json())
-      .then(json => json.stargazers_count)
-      .catch(() => 'stargazers error');
+      .then(json => json.stargazers_count || json.message)
+      .catch(() => 'fetch stargazers error');
 
     // Async promise
     const actionIP = getIP();

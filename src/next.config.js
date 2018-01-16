@@ -6,6 +6,7 @@ const autoprefixer = require('autoprefixer');
 
 module.exports = {
   distDir: '../.next',
+  poweredByHeader: false,
 
   webpack: (config, { dev }) => {
     const newConfig = config;

@@ -28,7 +28,8 @@ class Index extends React.Component {
     // 處理錯誤時預設回應
     // const actionIPPromise = actionIP.Promise.catch(() => ({ ip: 'xx.xx.xx.xx' }));
 
-    // 並發以加快回應
+    // 並發以加快回應，另外如果資料都是發 action 時就可以不 return，
+    // 統一由 store 取出來，這時可以判斷 isServer 為 true 時才 await 它，false 就直接讓他過
     const data = await Promise.all([stargazers, actionIP])
       .then(value => ({ stars: value[0], ip: value[1].ip }))
       .catch(() => ({ stars: '', ip: '' }));

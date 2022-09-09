@@ -1,0 +1,25 @@
+{
+  "plugins": ["@typescript-eslint"],
+  "extends": [
+    "next/core-web-vitals",
+    "airbnb",
+    "airbnb-typescript",
+    "airbnb/hooks",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking"
+  ],
+  "rules": {
+    "no-void": "off",
+    "@typescript-eslint/no-explicit-any": "error",
+    "semi": "off",
+    "@typescript-eslint/semi": ["error", "never"],
+    "react/function-component-definition": [
+      "error",
+      { "namedComponents": ["function-declaration", "function-expression", "arrow-function"] }
+    ]
+  },
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  }
+}

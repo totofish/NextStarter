@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    // https://github.com/Microsoft/vscode-eslint
+    "dbaeumer.vscode-eslint",
+    // https://github.com/stylelint/vscode-stylelint
+    "stylelint.vscode-stylelint",
+    // https://github.com/styled-components/vscode-styled-components
+    "styled-components.vscode-styled-components"
+  ]
+}

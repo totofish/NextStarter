@@ -1,0 +1,10 @@
+{
+  "eslint.enable": true,
+  "stylelint.enable": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
+  },
+  "typescript.disableAutomaticTypeAcquisition": true,
+  "editor.formatOnSave": false
+}

@@ -1,0 +1,11 @@
+{
+  "root": true,
+  "plugins": ["@typescript-eslint"],
+  "extends": [
+    "../.eslintrc.json"
+  ],
+  "rules": {
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "no-console": "off"
+  }
+}

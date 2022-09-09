@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= statusCode %>: <%= message %></title>
+    <style>
+        html {
+            width: 100%;
+            height: 100%;
+        }
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", "Fira Sans", Avenir, "Helvetica Neue", "Lucida Grande", sans-serif;
+            color: #fff;
+            text-align: center;
+            background: #000;
+        }
+        h1 {
+            display: inline-block;
+            padding: 0 23px 0 0;
+            margin: 0;
+            margin-right: 20px;
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 49px;
+            vertical-align: top;
+            border-right: 1px solid rgba(255, 255, 255, .3);
+        }
+        h2 {
+            display: inline-block;
+            height: 49px;
+            padding: 0;
+            margin: 0;
+            font-size: 14px;
+            font-weight: normal;
+            line-height: 49px;
+            line-height: 49px;
+            text-align: left;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <h1><%= statusCode %></h1>
+    <h2><%= message %></h2>
+</body>
+</html>

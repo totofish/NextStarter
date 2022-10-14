@@ -2,6 +2,8 @@ import React, { useCallback, useMemo, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import { useTranslation } from 'next-i18next'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { wrapper } from '@/store'
 import Button from '@/styled/Button'
 import Date from '@/styled/Date'
@@ -19,6 +21,7 @@ interface DatePageProps {
 }
 
 const DatePage: NextPage<DatePageProps> = ({ ip }: DatePageProps) => {
+  const { t } = useTranslation(['common', 'date'])
   const router = useRouter()
   const dispatch = useAppDispatch()
 
@@ -65,9 +68,9 @@ const DatePage: NextPage<DatePageProps> = ({ ip }: DatePageProps) => {
 
       <MainLayout>
         <h1 className="title" role="presentation">
-          <TitleShake data-shadow="Date">Date</TitleShake>
-          <Button red type="button" onClick={goToIndexPage}>index</Button>
-          <Button type="button" onClick={refetchDate}>refetch</Button>
+          <TitleShake locale={router.locale} data-shadow={t('title', { ns: 'date' })}>{t('title', { ns: 'date' })}</TitleShake>
+          <Button red type="button" onClick={goToIndexPage}>{t('nav.index')}</Button>
+          <Button type="button" onClick={refetchDate}>{t('refetch')}</Button>
         </h1>
         { renderDate }
         <small>{ ip }</small>
@@ -76,13 +79,14 @@ const DatePage: NextPage<DatePageProps> = ({ ip }: DatePageProps) => {
   )
 }
 
-export const getServerSideProps = wrapper.getServerSideProps((store) => async () => {
+export const getServerSideProps = wrapper.getServerSideProps((store) => async ({ locale }) => {
   const [ipResult] = await Promise.all([
     store.dispatch(getIp.initiate()),
     store.dispatch(getDate.initiate(undefined, { forceRefetch: true })),
   ])
   return {
     props: {
+      ...await serverSideTranslations(locale as string, ['common', 'date']),
       ip: ipResult?.data?.ip,
     },
   }

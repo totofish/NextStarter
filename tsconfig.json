@@ -26,5 +26,5 @@
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules", "dist", ".next", "out", "next.config.js"]
+  "exclude": ["node_modules", "dist", ".next", "out", "next.config.js", "next-i18next.config.js"]
 }

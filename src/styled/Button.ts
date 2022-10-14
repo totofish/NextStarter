@@ -9,8 +9,10 @@ export default styled.button<ButtonProps>`
   min-width: 60px;
   padding: 2px 4px;
   margin-left: 8px;
+  font-family: "Noto Sans TC", Roboto;
   font-size: 14px;
   font-weight: 400;
+  line-height: 1.15;
   cursor: pointer;
   background-color: transparent;
   border: 1px solid ${(props) => props.theme.colors.lightGray};

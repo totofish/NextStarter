@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { Provider } from 'react-redux'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
+import { appWithTranslation } from 'next-i18next'
 import { wrapper } from '@/store'
 import { ThemeProvider } from 'styled-components'
 import { theme } from '@/styled/theme'
@@ -57,4 +58,4 @@ function App({ Component, ...rest }: AppProps) {
   )
 }
 
-export default App
+export default appWithTranslation(App)

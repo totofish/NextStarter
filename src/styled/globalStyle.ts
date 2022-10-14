@@ -2,7 +2,45 @@ import { createGlobalStyle } from 'styled-components'
 
 export default createGlobalStyle`
   .container {
+    min-width: 340px;
     padding: 0 2rem;
+  }
+
+  .language {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    padding: 0;
+    margin: 0;
+    font-family: "Noto Sans TC", Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    list-style: none;
+
+    li {
+      display: inline-block;
+
+      &:not(:last-child) {
+        &::after {
+          display: inline-block;
+          width: 1px;
+          height: 10px;
+          margin: 0 10px;
+          vertical-align: middle;
+          content: '';
+          background-color: rgba(255, 255, 255, 0.6);
+        }
+      }
+    }
+
+    a {
+      color: #fff;
+      opacity: 0.8;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
   }
 
   .main {
@@ -15,33 +53,10 @@ export default createGlobalStyle`
     padding: 4rem 0;
   }
 
-  .footer {
-    display: flex;
-    flex: 1;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem 0;
-    border-top: 1px solid #eaeaea;
-  }
-
   .title {
     margin: 0;
     font-size: 4rem;
     line-height: 1.15;
     text-align: center;
-  }
-
-  .logo {
-    height: 1em;
-    margin-left: 0.5rem;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    .footer {
-      border-color: #222;
-    }
-    .logo img {
-      filter: invert(1);
-    }
   }
 `

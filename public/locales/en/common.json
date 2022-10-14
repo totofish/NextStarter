@@ -1,0 +1,7 @@
+{
+  "refetch": "refetch",
+  "nav": {
+    "index": "index",
+    "date": "date"
+  }
+}

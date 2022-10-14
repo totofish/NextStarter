@@ -4,7 +4,7 @@ import type { AnyAction } from '@reduxjs/toolkit'
 export const extractRehydrationInfo = (
   action: AnyAction,
   { reducerPath }: { reducerPath: string },
-// eslint-disable-next-line consistent-return
+  // eslint-disable-next-line consistent-return
 ) => {
   if (action.type === HYDRATE) {
     /*
